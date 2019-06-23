@@ -24,6 +24,10 @@ public class Block extends JButton {
     }
 
 
+    public boolean isActive() {
+        return active;
+    }
+
     public void activate() {
         this.setBackground(Color.WHITE);
         this.active = true;
@@ -36,16 +40,10 @@ public class Block extends JButton {
 
     public void changeState() {
         if (this.active) {
-            this.setBackground(Color.BLACK);
-            this.active = false;
+            this.deactivate();
         } else {
-            this.setBackground(Color.WHITE);
-            this.active = true;
+            this.activate();
         }
-    }
-
-    public boolean isActive() {
-        return active;
     }
 
     @Override

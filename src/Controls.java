@@ -14,7 +14,6 @@ public class Controls extends JPanel {
         this.setSize(700, 50);
         this.setBorder(BorderFactory.createTitledBorder("Controls"));
 
-        //JButton start = new JButton("Start");
         JButton start = new JButton("Start");
         JButton stop = new JButton("Stop");
         JButton oneStep = new JButton("Run One Step");
@@ -63,7 +62,6 @@ public class Controls extends JPanel {
         oneStep.addActionListener((l) -> {
 
             executorService.execute(GameGrid::playOneStep);
-            //gameGrid.playOneStep();
         });
 
         clear.addActionListener((l) -> {
